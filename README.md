@@ -1,5 +1,3 @@
-
-
 ## UML-Klassendiagramm des Projekts
 
 ```mermaid
