@@ -1,8 +1,5 @@
-# Übung 1: Factory Design Pattern & German Translator
+# Übung 1: Factory Design Pattern 
 
-## Aufgabenbeschreibung
-
-Diese Übung implementiert einen deutschen Zahlen-Übersetzer mit dem Factory Design Pattern.
 
 ### Funktionalität
 - Übersetzung von Zahlen (1-10) ins Deutsche
@@ -73,7 +70,6 @@ client.display(5); // Gibt "Das Ergebnis der Berechnung: fünf" aus
 ## Design Patterns
 
 - **Factory Pattern**: `Fabric.fabricate()` erstellt `GermanTranslator`-Instanzen
-- **Interface Segregation**: Verwendung des `Translator`-Interfaces
 
 ## Status
 ✅ **Abgeschlossen** - Vollständig implementiert und getestet
