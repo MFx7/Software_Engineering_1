@@ -6,12 +6,9 @@
 - **Status**: ✅ Abgeschlossen
 
 ### 📁 [Übung 2: TBD](src/org/hbrs/se1/ws25/exercises/uebung2/README.md)
-- **Thema**: Container-System, ID-basierte Verwaltung
-- **Implementiert**: Member Interface
-- **Status**: 🚧 In Entwicklung
+- **Status**: ⏳ Wartet auf Aufgabenstellung
 
-
-### 📁 [Übung 3: TBD](src/org/hbrs/se1/ws25/exercises/uebung4/README.md)
+### 📁 [Übung 3: TBD](src/org/hbrs/se1/ws25/exercises/uebung3/README.md)
 - **Status**: ⏳ Wartet auf Aufgabenstellung
 
 ### 📁 [Übung 4: TBD](src/org/hbrs/se1/ws25/exercises/uebung4/README.md)
