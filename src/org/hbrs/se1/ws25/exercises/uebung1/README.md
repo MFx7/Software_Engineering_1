@@ -1,41 +1,53 @@
 # Übung 1: Factory Design Pattern 
 
+## UML-Diagramm
+
+```mermaid
+---
+config:
+  theme: neo-dark
+  look: neo
+  layout: dagre
+title: SE1_Ü1 - Fabric Design Pattern
+---
+classDiagram
+direction TB
+    class Fabric {
+	    +fabricate() Translator
+    }
+    class GermanTranslatorTest {
+	    +aTest() void
+    }
+    class Client {
+	    +display(int aNumber) void
+    }
+    class GermanTranslator {
+	    +date String
+	    +translateNumber(int number) String
+	    +printInfo() void
+	    +setDate(String date) void
+    }
+    class Translator {
+	    +translateNumber(int number) String
+    }
+
+	<<interface>> Translator
+
+	note for GermanTranslatorTest "Contains 6 Test Cases as seen in 
+    - TemplateTestCase v1.6.xlsx"
+
+    GermanTranslator ..|> Translator : implements
+    Fabric --> GermanTranslator : uses
+    Client --> Fabric : uses
+    GermanTranslatorTest --> GermanTranslator : tests
+```
+
 
 ### Funktionalität
 - Übersetzung von Zahlen (1-10) ins Deutsche
 - Fehlerbehandlung für ungültige Zahlen
 - Factory Pattern für die Instanziierung
 
-## Klassenstruktur
-
-```mermaid
-classDiagram
-    class Translator {
-        <<interface>>
-        +version : double = 1.0
-        +translateNumber(number : int) : String
-    }
-    
-    class GermanTranslator {
-        +date : String = "Okt/2025"
-        +translateNumber(number : int) : String
-        +printInfo() : void
-        +setDate(date : String) : void
-    }
-    
-    class Fabric {
-        <<factory>>
-        +fabricate()$ : Translator
-    }
-    
-    class Client {
-        +display(aNumber : int) : void
-    }
-    
-    GermanTranslator ..|> Translator : implements
-    Fabric ..> GermanTranslator : creates
-    Client --> Fabric : uses
-```
 
 ## Implementierte Klassen
 
