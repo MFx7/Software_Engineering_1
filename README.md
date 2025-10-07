@@ -1,20 +1,45 @@
-## UML-Klassendiagramm des Projekts
+## Übungsübersicht
+
+### 📁 [Übung 1: Factory Design Pattern](src/org/hbrs/se1/ws25/exercises/uebung1/README.md)
+- **Thema**: Factory Pattern, Interface Implementation
+- **Implementiert**: GermanTranslator, Factory-Klasse, JUnit Tests
+- **Status**: ✅ Abgeschlossen
+
+### 📁 [Übung 2: TBD](src/org/hbrs/se1/ws25/exercises/uebung2/README.md)
+- **Thema**: Container-System, ID-basierte Verwaltung
+- **Implementiert**: Member Interface
+- **Status**: 🚧 In Entwicklung
+
+
+### 📁 [Übung 3: TBD](src/org/hbrs/se1/ws25/exercises/uebung4/README.md)
+- **Status**: ⏳ Wartet auf Aufgabenstellung
+
+### 📁 [Übung 4: TBD](src/org/hbrs/se1/ws25/exercises/uebung4/README.md)
+- **Status**: ⏳ Wartet auf Aufgabenstellung
+
+### 📁 [Übung 5: TBD](src/org/hbrs/se1/ws25/exercises/uebung5/README.md)
+- **Status**: ⏳ Wartet auf Aufgabenstellung
+
+### 📁 [Übung 6: TBD](src/org/hbrs/se1/ws25/exercises/uebung6/README.md)
+- **Status**: ⏳ Wartet auf Aufgabenstellung
+
+### 📁 [Übung 7: TBD](src/org/hbrs/se1/ws25/exercises/uebung7/README.md)
+- **Status**: ⏳ Wartet auf Aufgabenstellung
+
+### 📁 [Übung 8: TBD](src/org/hbrs/se1/ws25/exercises/uebung8/README.md)
+- **Status**: ⏳ Wartet auf Aufgabenstellung
+
+## Projekt-Gesamtübersicht
 
 ```mermaid
 classDiagram
-    %% Interfaces
+    %% Übung 1 - Factory Pattern
     class Translator {
         <<interface>>
         +version : double = 1.0
         +translateNumber(number : int) : String
     }
     
-    class Member {
-        <<interface>>
-        +getID() : Integer
-    }
-    
-    %% Control Layer - Übung 1
     class GermanTranslator {
         +date : String = "Okt/2025"
         +translateNumber(number : int) : String
@@ -27,9 +52,14 @@ classDiagram
         +fabricate()$ : Translator
     }
     
-    %% View Layer - Übung 1
     class Client {
         +display(aNumber : int) : void
+    }
+    
+    %% Übung 2 - Container Pattern
+    class Member {
+        <<interface>>
+        +getID() : Integer
     }
     
     %% Test Layer
@@ -41,7 +71,6 @@ classDiagram
     %% Relationships
     GermanTranslator ..|> Translator : implements
     Fabric ..> GermanTranslator : creates
-    Fabric ..> Translator : returns
     Client --> Fabric : uses
-    Client --> Translator : uses
+    GermanTranslatorTest --> GermanTranslator : tests
 ```
