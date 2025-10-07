@@ -1,5 +1,8 @@
 package org.hbrs.se1.ws25.exercises.uebung1.control;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class GermanTranslator implements Translator {
 
 	public String date = "Okt/2025"; // Default-Wert
@@ -10,7 +13,17 @@ public class GermanTranslator implements Translator {
 	 public String translateNumber(int number) {
 		// [ihr Source Code aus Übung 1-2]
 
-		return "null";
+		List<String> zahlen = Arrays.asList(
+   		   "eins", "zwei", "drei", "vier", "fünf",
+    			"sechs", "sieben", "acht", "neun", "zehn"
+			);
+
+		try{
+			return zahlen.get(number-1);
+			}
+			catch (IndexOutOfBoundsException e) {
+				return "Übersetzung der Zahl " + number +" nicht möglich (" + Translator.version +")"; 
+			}
 	}
 
 	/**
